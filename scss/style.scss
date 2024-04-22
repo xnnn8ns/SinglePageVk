@@ -13,7 +13,7 @@ html {
 }
 
 .container {
-    max-width: 80%;
+    max-width: 65%;
     margin: 0 auto;
     padding: 2px 0;
 }
@@ -87,7 +87,7 @@ header {
 .aside {
     display: flex;
     flex-direction: column;
-    width: 149px;
+    width: 179px;
 
     &__cell:first-child {margin-top: 15px;}
     &__cell {
@@ -95,7 +95,7 @@ header {
         align-items: center;
         justify-content: space-between;
         font-size: 12.5px;
-        padding: 0 6px;
+        padding: 2px 6px;
         color: $primary-color;
 
         .content {
@@ -104,9 +104,9 @@ header {
 
             h1 {
                 text-wrap: nowrap;
-                margin-right: 20px;
+                margin-left: 5px;
                 font-size: 15px;
-                width: 115px;
+                width: 95px;
             }
         }
         
@@ -119,33 +119,44 @@ header {
         }
     }
 
+    .aside__cell:hover {
+        cursor: pointer;
+        background-color: rgba(75, 75, 75, 0.2);
+    }
+
     &__footer {
         display: flex;
         flex-direction: column;
-        width: 149px;
-        padding: 0 6px;
+        width: 179px;
+        padding: 0 8px;
 
         .footer-content {
             display: flex;
+            margin-bottom: 5px;
             p {
                 margin-right: 10px;
                 font-size: 12px;
                 color: $colorNotification;
             }
+
+            p:hover {
+                text-decoration: underline;
+            }
         }
     }
 
     #firstHr {
-        width: 120px;
+        width: 70%;
         border: 1px solid $colorHr;
-        margin: 6px 0;
+        margin: 12px 0;
         margin-left: auto;
     }
 
     #secondHr {
-        width: 144px;
+        width: 96%;
         border: 1px solid $colorHr;
-        margin: 6px 0;
+        margin: 12px 0;
         margin-left: auto;
     }
 }
+
