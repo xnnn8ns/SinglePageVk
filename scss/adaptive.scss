@@ -1,0 +1,85 @@
+@media (min-width: 768px) {
+    .container {
+        max-width: 100%;
+    }
+
+    .content__container {
+        max-width: 100%;
+    }
+
+    .main__menu {
+        padding: 10px 0;
+    }
+
+    .main__menu-right .avatar-container {
+        width: 115px;
+        margin-right: 0;
+    }
+    .main__menu-right .avatar-container .menu-avatar img {
+        width: 115px;
+        height: 115px;
+    }
+
+    .main__menu-right .menu-name__2 .menu-name__content {
+        margin-right: 7px;
+        font-size: 12px;
+    }
+
+    .main__menu-left .menu-btn a {
+        padding: 8px 8px;
+        font-size: 13px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .container {
+        max-width: 90%;
+    }
+
+    .content__container {
+        max-width: 90%;
+    }
+
+    .main__menu {
+        padding: 20px 20px 20px 10px;
+    }
+
+    .main__menu-right .avatar-container {
+        width: 140px;
+        margin-right: 15px;
+    }
+    .main__menu-right .avatar-container .menu-avatar img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .main__menu-right .menu-name__2 .menu-name__content {
+        margin-right: 15px;
+        font-size: 13px;
+    }
+
+    .main__menu-left .menu-btn a {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 77%;
+    }
+
+    .content__container {
+        max-width: 77%;
+    }
+}
+
+@media (min-width: 1440px) {
+    .container {
+        max-width: 65%;
+    }
+
+    .content__container {
+        max-width: 65%;
+    }
+}

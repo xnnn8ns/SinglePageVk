@@ -1,12 +1,5 @@
 @import "nullstyle";
-
-$primary-color: #FFF;
-$secondary-color: #939393;
-$colorBg: #222222;
-$colorBorder: #343536;
-$colorHr: #363738;
-$colorText-header: #818C99;
-$colorNotification: #828282;
+@import "AdditionalStyle";
 
 html {
     background-color: #141414;
@@ -168,79 +161,169 @@ header {
 
 .main {
     display: flex;
+    flex-direction: column;
     flex: 1 1 auto;
-    align-items: flex-end;
-    background-color: rgba(207, 217, 233, .32);
-    border: 1px solid $colorBorder;
-    border-radius: 12px;
 
-    .main__header {
-        width: 100%;
-        background-color: $colorBg;
+    .head {
+        display: flex;
+        align-items: flex-end;
+        height: 339px;
+        background-color: rgba(207, 217, 233, .32);
         border: 1px solid $colorBorder;
         border-radius: 12px;
-    }
 
-    &__menu {
-        display: flex;
-        justify-content: space-around;
-        padding: 20px;
+        .main__header {
+            @include bgBlock;
+            margin-top: 100px;
+        }
 
-        &-right {
+        .main__menu {
             display: flex;
-            align-items: center;
-            padding: 10px 0;
+            justify-content: space-between;
+            padding: 20px 20px 20px 15px;
 
-            .menu-avatar {}
-            .menu-name {
+            &-right {
                 display: flex;
-                flex-direction: column;
+                align-items: center;
+                padding: 10px 0;
 
-                &__1 {
-                    height: 26px;
-                    font-size: 21px;
-                    font-weight: 600;
-                    color: $primary-color
-                }
+                .avatar-container {
+                    width: 140px;
+                    margin-top: -100px;
+                    margin-right: 15px;
 
-                &__2 {
-                    display: flex;
-                    height: 26px;
-                    color: $secondary-color;
-                    padding: 4px 0;
-
-                    .menu-name__content {
-                        display: flex;
-                        align-items: center;
-                        font-size: 13px;
-                        margin-right: 15px;
-
+                    .menu-avatar {
                         img {
-                            margin-right: 10px;
+                            width: 150px;
+                            height: 150px;
+                            border: 4px solid $colorBorder;
+                            border-radius: 50%;
+                        }
+                    }
+                }
+                
+                .menu-name {
+                    display: flex;
+                    flex-direction: column;
+
+                    &__1 {
+                        height: 26px;
+                        font-size: 21px;
+                        font-weight: 600;
+                        color: $primary-color
+                    }
+
+                    &__2 {
+                        display: flex;
+                        height: 26px;
+                        color: $secondary-color;
+                        padding: 4px 0;
+
+                        .menu-name__content {
+                            display: flex;
+                            align-items: center;
+                            font-size: 13px;
+                            margin-right: 15px;
+
+                            img {
+                                margin-right: 5px;
+                                width: 20px;
+                            }
                         }
                     }
                 }
             }
-        }
 
-        &-left {
-            display: flex;
-            align-items: center;
-            margin-bottom: 18px;
-
-            .menu-btn {
+            &-left {
                 display: flex;
                 align-items: center;
+                margin-bottom: 18px;
 
-                a {
+                .menu-btn {
                     display: flex;
                     align-items: center;
-                }
 
-                a:last-child {
-                    margin-left: 6px;
+                    a {
+                        display: flex;
+                        align-items: center;
+
+                        background-color: #3d3d3d;
+                        border: 1px solid #3d3d3d;
+                        color: $primary-color;
+                        border-radius: 8px;
+                        padding: 8px 16px;
+
+                        font-size: 14px;
+                        font-weight: 500;
+                        text-wrap: nowrap;
+                    }
+
+                    a:last-child {
+                        margin-left: 6px;
+                        img {
+                            margin-left: 7px;
+                        }
+                    }
+
+                    a:hover {
+                        background-color: #4b4b4b;
+                        border: 1px solid #4b4b4b;
+                    }
                 }
             }
         }
     }
+
+    &__2column {
+        display: flex;
+        justify-content: space-between;
+        margin: 8px 0;
+
+        &-left {
+            display: flex;
+            flex-direction: column;
+            width: 60%;
+
+            .user-data {
+                @include bgBlock;
+                min-height: 226px;
+                max-height: 450px;
+                padding: 8px;
+
+                &__nav {
+                    display: flex;
+                    justify-content: space-between;
+                    height: 44px;
+
+                    a {
+                        display: flex;
+                        align-items: center;
+                        color: $colorNotification;
+                        font-size: 14px;
+                        font-weight: 500;
+                        padding: 2px 8px;
+                        margin: 8px 12px 8px 0;
+
+                        img {
+                            margin-right: 5px;
+                        }
+                    }
+                }
+                
+                &__content {
+                    display: flex;
+                    justify-content: center;
+                    padding: 48px 32px;
+                }
+            }
+        }
+
+        &-right {
+            display: flex;
+            flex-direction: column;
+            width: 40%;
+        }
+    }
 }
+
+@import "adaptive";

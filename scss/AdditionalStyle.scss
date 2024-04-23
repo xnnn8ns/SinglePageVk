@@ -1,0 +1,14 @@
+$primary-color: #dee0e2;
+$secondary-color: #939393;
+$colorBg: #222222;
+$colorBorder: #343536;
+$colorHr: #363738;
+$colorText-header: #818C99;
+$colorNotification: #828282;
+
+@mixin bgBlock {
+    width: 100%;
+    background-color: $colorBg;
+    border: 1px solid $colorBorder;
+    border-radius: 12px;
+}
