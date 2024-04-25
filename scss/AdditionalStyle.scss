@@ -8,6 +8,27 @@ $colorNotification: #828282;
 $colorBtnBg: #424242;
 $colorBtnActive: #292929;
 
+@font-face {
+    font-family: 'VK Sans Display';
+    src: url('../font/VK_Sans_Display_Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'VK Sans Display';
+    src: url('../font/VKSansDisplay-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'VK Sans Display';
+    src: url('../font/VKSansDisplay-DemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
 @mixin bgBlock {
     width: 100%;
     background-color: $colorBg;

@@ -70,9 +70,27 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: inherit;
 }
 
+@font-face {
+  font-family: "VK Sans Display";
+  src: url("../font/VK_Sans_Display_Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "VK Sans Display";
+  src: url("../font/VKSansDisplay-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "VK Sans Display";
+  src: url("../font/VKSansDisplay-DemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
 html {
   background-color: #141414;
-  font-family: Roboto, "Times New Roman", Times, serif;
+  font-family: "VK Sans Display", Roboto, "Times New Roman", Times, serif;
 }
 
 .container {
@@ -121,6 +139,8 @@ header .nav .nav-menu {
   display: flex;
 }
 header .nav .nav-menu__search {
+  display: inline-block;
+  position: relative;
   padding: 5px 10px 0;
 }
 header .nav .nav-menu__search input {
@@ -129,14 +149,25 @@ header .nav .nav-menu__search input {
   background-color: #424242;
   border: none;
   border-radius: 8px;
-  padding: 0 10px;
-  color: #818C99;
+  padding-left: 32px;
+  color: #dee0e2;
 }
 header .nav .nav-menu__search input:hover {
   background-color: #4b4b4b;
 }
 header .nav .nav-menu__search img {
   padding: 10px 0;
+}
+header .nav .nav-menu .nav-menu__search::before {
+  content: "";
+  position: absolute;
+  left: 18px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  background: url("../img/header/search.png") no-repeat;
+  width: 16px;
+  height: 16px;
 }
 header .nav .nav-menu img {
   max-width: 20px;
@@ -212,7 +243,7 @@ header .nav a:hover {
 .aside__cell .content h1 {
   text-wrap: nowrap;
   margin-left: 5px;
-  font-size: 15px;
+  font-size: 13px;
   width: 95px;
 }
 .aside__cell span {
@@ -398,7 +429,7 @@ header .nav a:hover {
   border-radius: 8px;
   padding: 8px 16px;
   font-size: 14px;
-  font-weight: 500;
+  font-weight: 600;
   text-wrap: nowrap;
 }
 .main .head .main__menu-left .menu-btn a:last-child {
@@ -460,7 +491,7 @@ header .nav a:hover {
   border: 1px solid #222222;
   border-radius: 8px;
   font-size: 14px;
-  font-weight: 500;
+  font-weight: 600;
   padding: 2px 8px;
   margin: 6px 0 6px 8px;
 }
@@ -501,7 +532,7 @@ header .nav a:hover {
   border-radius: 8px;
   color: #dee0e2;
   font-size: 14px;
-  font-weight: 500;
+  font-weight: 600;
   padding: 8px 16px;
 }
 .main__2column-left .user-data__content a:hover {
