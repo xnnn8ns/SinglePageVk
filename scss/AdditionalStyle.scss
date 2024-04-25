@@ -5,10 +5,32 @@ $colorBorder: #343536;
 $colorHr: #363738;
 $colorText-header: #818C99;
 $colorNotification: #828282;
+$colorBtnBg: #424242;
+$colorBtnActive: #292929;
 
 @mixin bgBlock {
     width: 100%;
     background-color: $colorBg;
     border: 1px solid $colorBorder;
     border-radius: 12px;
+}
+
+@mixin title {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: $primary-color;
+
+    a {
+        font-size: 14px;
+        color: $primary-color;
+        font-weight: 500;
+    }
+    
+    span {
+        font-size: 13px;
+        color: $colorNotification;
+        font-weight: 500;
+        margin-left: 6px;
+    }
 }
