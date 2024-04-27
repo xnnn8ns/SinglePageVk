@@ -281,6 +281,17 @@ header .nav a:hover {
 .aside__footer .footer-content p:hover {
   text-decoration: underline;
 }
+.aside__footer .footer-content #MoreWithArrow {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+.aside__footer .footer-content #MoreWithArrow p {
+  margin-right: 5px;
+}
 .aside #firstHr {
   width: 75%;
   height: 0.5px;
@@ -311,6 +322,7 @@ header .nav a:hover {
           flex: 1 1 auto;
 }
 .main .head {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -321,6 +333,32 @@ header .nav a:hover {
   background-color: rgba(207, 217, 233, 0.32);
   border: 1px solid #343536;
   border-radius: 12px;
+}
+.main .head .background-settings {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: #2b2b2d;
+  border: 1px solid #2b2b2d;
+  color: #dee0e2;
+  border-radius: 8px;
+  padding: 4px 16px 4px 12px;
+  font-size: 14px;
+  font-weight: 600;
+  text-wrap: nowrap;
+}
+.main .head .background-settings p {
+  margin-left: 6px;
+}
+.main .head .background-settings img {
+  width: 24px;
+  height: 24px;
 }
 .main .head .main__header {
   width: 100%;
@@ -636,20 +674,11 @@ header .nav a:hover {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-.main__2column-right .user-friends__all .avatar-row2 {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-.main__2column-right .user-friends__all .avatar-row2 .avatar {
-  padding-top: 0;
+  overflow: hidden;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  max-width: 330px;
+  max-height: 226px;
 }
 .main__2column-right .user-friends #hrFriend {
   padding: 0 8px;
@@ -713,7 +742,6 @@ header .nav a:hover {
   background-color: #222222;
   border: 1px solid #343536;
   border-radius: 12px;
-  margin: 12px 0;
   padding: 8px;
 }
 .main__2column-right .user-subscription .title {
@@ -790,10 +818,10 @@ header .nav a:hover {
 
 @media (min-width: 768px) {
   .container {
-    max-width: 100%;
+    max-width: 98%;
   }
   .content__container {
-    max-width: 100%;
+    max-width: 98%;
   }
   .main__menu {
     padding: 10px 0;
@@ -824,12 +852,6 @@ header .nav a:hover {
   .main__2column-right .user-gifts__image a:nth-child(3) {
     display: none;
   }
-  .main__2column-right .user-friends__all .avatar-row .avatar:last-child {
-    display: none;
-  }
-  .main__2column-right .user-friends__all .avatar-row .avatar:nth-child(3) {
-    display: none;
-  }
   .main__2column-left .user-data__nav a:last-child {
     display: none;
   }
@@ -841,16 +863,17 @@ header .nav a:hover {
   }
   .main .head .main__menu {
     padding: 10px 0;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  .main .head .main__menu-left {
+    margin: 0 auto 32px;
   }
 }
 @media (min-width: 896px) {
   .main__2column-right .user-gifts__image a:nth-child(3) {
     display: block;
-  }
-  .main__2column-right .user-friends__all .avatar-row .avatar:nth-child(3) {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
   }
   .main__2column-left .user-data__nav a:nth-child(3) {
     display: -webkit-box;
@@ -863,6 +886,12 @@ header .nav a:hover {
   }
   .main .head .main__menu {
     padding: 20px 20px 20px 15px;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .main .head .main__menu-left {
+    margin: 0 0 32px 0;
   }
 }
 @media (min-width: 1024px) {
@@ -891,11 +920,6 @@ header .nav a:hover {
     padding: 8px 16px;
     font-size: 14px;
   }
-  .main__2column-right .user-friends__all .avatar-row .avatar:last-child {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
   .main__2column-left .user-data__nav a:last-child {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -909,10 +933,10 @@ header .nav a:hover {
 }
 @media (min-width: 1200px) {
   .container {
-    max-width: 90%;
+    max-width: 92%;
   }
   .content__container {
-    max-width: 90%;
+    max-width: 92%;
   }
   .main__2column-right .user-gifts__image a:last-child {
     display: block;
@@ -920,17 +944,93 @@ header .nav a:hover {
 }
 @media (min-width: 1325px) {
   .container {
-    max-width: 80%;
+    max-width: 84%;
   }
   .content__container {
-    max-width: 80%;
+    max-width: 84%;
   }
 }
 @media (min-width: 1440px) {
   .container {
-    max-width: 75%;
+    max-width: 80%;
   }
   .content__container {
-    max-width: 75%;
+    max-width: 80%;
+  }
+  .main__2column-left {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 auto;
+            flex: 0 1 auto;
+  }
+  .main__2column-right {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 auto;
+            flex: 0 1 auto;
+  }
+}
+@media (min-width: 1650px) {
+  .main__2column-left {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 auto;
+            flex: 1 1 auto;
+  }
+  .main__2column-right {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 360px;
+            flex: 0 0 360px;
+  }
+  .content__container {
+    max-width: 68%;
+  }
+  .container {
+    max-width: 68%;
+  }
+}
+@media (min-width: 1920px) {
+  .content__container {
+    max-width: 60%;
+  }
+  .container {
+    max-width: 60%;
+  }
+}
+@media (min-width: 2148px) {
+  .content__container {
+    max-width: 55%;
+  }
+  .container {
+    max-width: 55%;
+  }
+}
+@media (min-width: 2348px) {
+  .content__container {
+    max-width: 50%;
+  }
+  .container {
+    max-width: 50%;
+  }
+}
+@media (min-width: 2548px) {
+  .content__container {
+    max-width: 45%;
+  }
+  .container {
+    max-width: 45%;
+  }
+}
+@media (min-width: 2748px) {
+  .content__container {
+    max-width: 41%;
+  }
+  .container {
+    max-width: 41%;
+  }
+}
+@media (min-width: 3072px) {
+  .content__container {
+    max-width: 37%;
+  }
+  .container {
+    max-width: 37%;
   }
 }
