@@ -208,30 +208,48 @@
                     <div class="main__2column-left">
                         <div class="user-data">
                             <div class="user-data__nav">
-                                <a href="#">
+                                <a href="#" id="music-link" class="active">
                                     <img src="img/header/Music.png" alt="Music icon">
                                     <p>Музыка</p>
                                 </a>
-                                <a href="#">
+                                <a href="#" id="photo-link">
                                     <img src="img/main/image.png" alt="Photo icon">
                                     <p>Фото</p>
                                 </a>
-                                <a href="#">
+                                <a href="#" id="clip-link">
                                     <img src="img/main/clips.png" alt="Clip icon">
                                     <p>Клипы</p>
                                 </a>
-                                <a href="#">
+                                <a href="#" id="article-link">
                                     <img src="img/main/article.png" alt="Article icon">
                                     <p>Статьи</p>
                                 </a>
-                                <a href="#">
+                                <a href="#" id="album-link">
                                     <img src="img/main/album.png" alt="Album icon">
                                     <p>Альбомы</p>
                                 </a>
                             </div>
                             <div class="user-data__content">
-                                <p>Вы еще не загрузили фото</p>
-                                <a href="#">Загрузить фото</a>
+                                <div id="music-content">
+                                    <p>Вы еще не добавили музыку</p>
+                                    <a href="#">Добавить музыку</a>
+                                </div>
+                                <div id="photo-content" class="hidden">
+                                    <p>Вы еще не загрузили фото</p>
+                                    <a href="#">Загрузить фото</a>
+                                </div>
+                                <div id="clip-content" class="hidden">
+                                    <p>Вы еще не добавили клипы</p>
+                                    <a href="#">Создать клип</a>
+                                </div>
+                                <div id="article-content" class="hidden">
+                                    <p>Вы еще не добавили статью</p>
+                                    <a href="#">Создать статью</a>
+                                </div>
+                                <div id="album-content" class="hidden">
+                                    <p>Вы еще не создали альбом</p>
+                                    <a href="#">Создать альбом</a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -345,5 +363,7 @@
             </div>
         </div>
     </div>
+
+    <script src="js/script.js"></script>
 </body>
 </html>
